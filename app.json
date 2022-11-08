@@ -4,27 +4,41 @@
     "slug": "enaru",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "icon": "./assets/enau/aav4.png",
+    "userInterfaceStyle": "automatic",
     "splash": {
-      "image": "./assets/splash.png",
-      "resizeMode": "contain",
+      "image": "./assets/enau/splash3.png",
+      "resizeMode": "cover",
       "backgroundColor": "#ffffff"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": true
-    },
-    "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#FFFFFF"
+      "supportsTablet": true,
+      "bundleIdentifier": "org.enaru.ngo",
+      "buildNumber": "0.0.1",
+      "entitlements": {
+        "com.apple.developer.networking.wifi-info": true
       }
+    },
+
+    "plugins": [
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Access to your photo library is required to attach photos to  event images upload."
+        }
+      ]
+    ],
+    "android": {
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/enau/aav2.png",
+        "backgroundColor": "#FFFFFF"
+      },
+      "package": "org.enaru.ngo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
